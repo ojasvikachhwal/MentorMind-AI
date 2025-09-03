@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^20.2.1"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.12"
+  }
+}

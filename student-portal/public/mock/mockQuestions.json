@@ -1,0 +1,75 @@
+{
+  "session_id": 1,
+  "questions": [
+    {
+      "id": 1,
+      "subject_id": 1,
+      "text": "What is the time complexity of accessing an element in an array?",
+      "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "subject_id": 1,
+      "text": "Which data structure follows LIFO principle?",
+      "options": ["Queue", "Stack", "Tree", "Graph"],
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "subject_id": 1,
+      "text": "What is the time complexity of binary search?",
+      "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+      "difficulty": "medium"
+    },
+    {
+      "id": 4,
+      "subject_id": 2,
+      "text": "What is encapsulation?",
+      "options": ["Hiding data", "Inheriting from parent", "Multiple forms", "Creating objects"],
+      "difficulty": "easy"
+    },
+    {
+      "id": 5,
+      "subject_id": 2,
+      "text": "What is the difference between overloading and overriding?",
+      "options": ["Same method, different parameters", "Same method, different classes", "Different methods, same name", "Same method, same parameters"],
+      "difficulty": "medium"
+    },
+    {
+      "id": 6,
+      "subject_id": 3,
+      "text": "What does SQL stand for?",
+      "options": ["Structured Query Language", "Simple Query Language", "Standard Query Language", "System Query Language"],
+      "difficulty": "easy"
+    },
+    {
+      "id": 7,
+      "subject_id": 3,
+      "text": "What is normalization?",
+      "options": ["Organizing data efficiently", "Adding indexes", "Creating backups", "Optimizing queries"],
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "subject_id": 4,
+      "text": "What is an operating system?",
+      "options": ["System software", "Application software", "Hardware", "Network"],
+      "difficulty": "easy"
+    },
+    {
+      "id": 9,
+      "subject_id": 4,
+      "text": "What is virtual memory?",
+      "options": ["Memory abstraction", "Physical RAM", "Cache memory", "ROM"],
+      "difficulty": "medium"
+    },
+    {
+      "id": 10,
+      "subject_id": 5,
+      "text": "What does HTML stand for?",
+      "options": ["HyperText Markup Language", "High Tech Modern Language", "Home Tool Markup Language", "Hyperlink and Text Markup Language"],
+      "difficulty": "easy"
+    }
+  ]
+}

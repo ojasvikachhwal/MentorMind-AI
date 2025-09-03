@@ -1,0 +1,112 @@
+{
+  "session_id": 1,
+  "status": "submitted",
+  "created_at": "2024-01-01T12:00:00Z",
+  "results": [
+    {
+      "subject_id": 1,
+      "subject_name": "Data Structures & Algorithms",
+      "percent_correct": 75.0,
+      "weighted_score": 18,
+      "level": "advanced",
+      "recommended_courses": [
+        {
+          "id": 5,
+          "title": "Dynamic Programming",
+          "level": "advanced",
+          "description": "Advanced algorithmic techniques"
+        },
+        {
+          "id": 6,
+          "title": "Advanced Graph Algorithms",
+          "level": "advanced",
+          "description": "Complex graph algorithms and optimization"
+        }
+      ]
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "Object-Oriented Programming",
+      "percent_correct": 60.0,
+      "weighted_score": 12,
+      "level": "intermediate",
+      "recommended_courses": [
+        {
+          "id": 7,
+          "title": "Design Patterns",
+          "level": "intermediate",
+          "description": "Common design patterns in OOP"
+        },
+        {
+          "id": 8,
+          "title": "SOLID Principles",
+          "level": "intermediate",
+          "description": "SOLID design principles"
+        }
+      ]
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "Database Management Systems",
+      "percent_correct": 50.0,
+      "weighted_score": 10,
+      "level": "intermediate",
+      "recommended_courses": [
+        {
+          "id": 9,
+          "title": "Advanced SQL",
+          "level": "intermediate",
+          "description": "Complex SQL queries and optimization"
+        },
+        {
+          "id": 10,
+          "title": "Database Normalization",
+          "level": "intermediate",
+          "description": "Database normalization techniques"
+        }
+      ]
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "Operating Systems",
+      "percent_correct": 40.0,
+      "weighted_score": 8,
+      "level": "beginner",
+      "recommended_courses": [
+        {
+          "id": 11,
+          "title": "OS Fundamentals",
+          "level": "beginner",
+          "description": "Basic operating system concepts"
+        },
+        {
+          "id": 12,
+          "title": "Process Management",
+          "level": "beginner",
+          "description": "Process creation and management"
+        }
+      ]
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "Web Development",
+      "percent_correct": 30.0,
+      "weighted_score": 6,
+      "level": "beginner",
+      "recommended_courses": [
+        {
+          "id": 13,
+          "title": "HTML and CSS Basics",
+          "level": "beginner",
+          "description": "Basic web markup and styling"
+        },
+        {
+          "id": 14,
+          "title": "JavaScript Fundamentals",
+          "level": "beginner",
+          "description": "Basic JavaScript programming"
+        }
+      ]
+    }
+  ]
+}

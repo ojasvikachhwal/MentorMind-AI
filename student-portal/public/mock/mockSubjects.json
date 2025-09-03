@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Data Structures & Algorithms",
+    "description": "Fundamental data structures and algorithmic concepts"
+  },
+  {
+    "id": 2,
+    "name": "Object-Oriented Programming",
+    "description": "Principles and practices of OOP including classes, inheritance, and polymorphism"
+  },
+  {
+    "id": 3,
+    "name": "Database Management Systems",
+    "description": "Database design, SQL, and database management concepts"
+  },
+  {
+    "id": 4,
+    "name": "Operating Systems",
+    "description": "OS concepts, processes, memory management, and file systems"
+  },
+  {
+    "id": 5,
+    "name": "Web Development",
+    "description": "Frontend and backend web development technologies"
+  }
+]

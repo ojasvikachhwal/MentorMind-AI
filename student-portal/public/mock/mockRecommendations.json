@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Arrays and Lists",
+    "subject": "Data Structures & Algorithms",
+    "level": "beginner",
+    "description": "Basic array and list operations",
+    "duration": "2 hours",
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "title": "Stacks and Queues Fundamentals",
+    "subject": "Data Structures & Algorithms",
+    "level": "beginner",
+    "description": "Stack and queue data structures",
+    "duration": "3 hours",
+    "rating": 4.3
+  },
+  {
+    "id": 3,
+    "title": "Binary Trees and Graphs",
+    "subject": "Data Structures & Algorithms",
+    "level": "intermediate",
+    "description": "Tree and graph data structures",
+    "duration": "4 hours",
+    "rating": 4.7
+  },
+  {
+    "id": 4,
+    "title": "Sorting and Searching Algorithms",
+    "subject": "Data Structures & Algorithms",
+    "level": "intermediate",
+    "description": "Common sorting and searching techniques",
+    "duration": "5 hours",
+    "rating": 4.6
+  },
+  {
+    "id": 5,
+    "title": "Dynamic Programming",
+    "subject": "Data Structures & Algorithms",
+    "level": "advanced",
+    "description": "Advanced algorithmic techniques",
+    "duration": "6 hours",
+    "rating": 4.8
+  },
+  {
+    "id": 6,
+    "title": "Classes and Objects Basics",
+    "subject": "Object-Oriented Programming",
+    "level": "beginner",
+    "description": "Introduction to classes and objects",
+    "duration": "2 hours",
+    "rating": 4.4
+  },
+  {
+    "id": 7,
+    "title": "Inheritance and Polymorphism",
+    "subject": "Object-Oriented Programming",
+    "level": "beginner",
+    "description": "Basic inheritance concepts",
+    "duration": "3 hours",
+    "rating": 4.2
+  },
+  {
+    "id": 8,
+    "title": "Design Patterns",
+    "subject": "Object-Oriented Programming",
+    "level": "intermediate",
+    "description": "Common design patterns in OOP",
+    "duration": "4 hours",
+    "rating": 4.5
+  },
+  {
+    "id": 9,
+    "title": "SOLID Principles",
+    "subject": "Object-Oriented Programming",
+    "level": "intermediate",
+    "description": "SOLID design principles",
+    "duration": "3 hours",
+    "rating": 4.6
+  },
+  {
+    "id": 10,
+    "title": "SQL Fundamentals",
+    "subject": "Database Management Systems",
+    "level": "beginner",
+    "description": "Basic SQL queries and operations",
+    "duration": "3 hours",
+    "rating": 4.3
+  },
+  {
+    "id": 11,
+    "title": "Database Design Basics",
+    "subject": "Database Management Systems",
+    "level": "beginner",
+    "description": "Introduction to database design",
+    "duration": "4 hours",
+    "rating": 4.4
+  },
+  {
+    "id": 12,
+    "title": "Advanced SQL",
+    "subject": "Database Management Systems",
+    "level": "intermediate",
+    "description": "Complex SQL queries and optimization",
+    "duration": "5 hours",
+    "rating": 4.7
+  },
+  {
+    "id": 13,
+    "title": "HTML and CSS Basics",
+    "subject": "Web Development",
+    "level": "beginner",
+    "description": "Basic web markup and styling",
+    "duration": "3 hours",
+    "rating": 4.2
+  },
+  {
+    "id": 14,
+    "title": "JavaScript Fundamentals",
+    "subject": "Web Development",
+    "level": "beginner",
+    "description": "Basic JavaScript programming",
+    "duration": "4 hours",
+    "rating": 4.5
+  },
+  {
+    "id": 15,
+    "title": "Frontend Frameworks",
+    "subject": "Web Development",
+    "level": "intermediate",
+    "description": "Modern frontend frameworks",
+    "duration": "6 hours",
+    "rating": 4.6
+  }
+]

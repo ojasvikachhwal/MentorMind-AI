@@ -1,0 +1,235 @@
+{
+  "user_id": 123,
+  "recommendations": [
+    {
+      "subject": "Computer Networks",
+      "level": "Beginner",
+      "courses": [
+        {
+          "id": 5,
+          "title": "Network Security Essentials",
+          "subject": "Computer Networks",
+          "level": "Intermediate",
+          "source": "Coursera",
+          "url": "https://www.coursera.org/learn/network-security"
+        },
+        {
+          "id": 26,
+          "title": "TCP/IP Protocol Suite",
+          "subject": "Computer Networks",
+          "level": "Intermediate",
+          "source": "YouTube",
+          "url": "https://www.youtube.com/watch?v=e5DEVa9eSN0"
+        },
+        {
+          "id": 27,
+          "title": "Wireless Networks Fundamentals",
+          "subject": "Computer Networks",
+          "level": "Intermediate",
+          "source": "Infosys Springboard",
+          "url": "https://infyspringboard.onwingspan.com/en/app/course/wireless-networks"
+        },
+        {
+          "id": 28,
+          "title": "Network Troubleshooting",
+          "subject": "Computer Networks",
+          "level": "Intermediate",
+          "source": "Free Platform",
+          "url": "https://www.geeksforgeeks.org/network-troubleshooting"
+        },
+        {
+          "id": 52,
+          "title": "IPv6 Implementation",
+          "subject": "Computer Networks",
+          "level": "Intermediate",
+          "source": "Coursera",
+          "url": "https://www.coursera.org/learn/ipv6-implementation"
+        }
+      ]
+    },
+    {
+      "subject": "OOPS",
+      "level": "Intermediate",
+      "courses": [
+        {
+          "id": 8,
+          "title": "Design Patterns in OOP",
+          "subject": "OOPS",
+          "level": "Advanced",
+          "source": "Infosys Springboard",
+          "url": "https://infyspringboard.onwingspan.com/en/app/course/oop-design-patterns"
+        },
+        {
+          "id": 10,
+          "title": "OOP Advanced Principles",
+          "subject": "OOPS",
+          "level": "Advanced",
+          "source": "Coursera",
+          "url": "https://www.coursera.org/specializations/object-oriented-design"
+        },
+        {
+          "id": 34,
+          "title": "Advanced Java OOP Concepts",
+          "subject": "OOPS",
+          "level": "Advanced",
+          "source": "YouTube",
+          "url": "https://www.youtube.com/watch?v=oNbVRV8jZ5M"
+        },
+        {
+          "id": 35,
+          "title": "Object-Oriented Analysis and Design",
+          "subject": "OOPS",
+          "level": "Advanced",
+          "source": "Coursera",
+          "url": "https://www.coursera.org/learn/object-oriented-analysis-design"
+        },
+        {
+          "id": 59,
+          "title": "Functional Programming vs OOP",
+          "subject": "OOPS",
+          "level": "Advanced",
+          "source": "Free Platform",
+          "url": "https://www.geeksforgeeks.org/functional-vs-oop"
+        }
+      ]
+    },
+    {
+      "subject": "Operating Systems",
+      "level": "Advanced",
+      "courses": [
+        {
+          "id": 13,
+          "title": "Advanced Operating System Concepts",
+          "subject": "Operating Systems",
+          "level": "Advanced",
+          "source": "Infosys Springboard",
+          "url": "https://infyspringboard.onwingspan.com/en/app/course/advanced-os"
+        },
+        {
+          "id": 38,
+          "title": "OS Virtualization Techniques",
+          "subject": "Operating Systems",
+          "level": "Advanced",
+          "source": "Free Platform",
+          "url": "https://www.geeksforgeeks.org/virtualization-in-operating-system"
+        },
+        {
+          "id": 39,
+          "title": "Real-Time Operating Systems",
+          "subject": "Operating Systems",
+          "level": "Advanced",
+          "source": "Infosys Springboard",
+          "url": "https://infyspringboard.onwingspan.com/en/app/course/rtos"
+        },
+        {
+          "id": 40,
+          "title": "Linux Kernel Programming",
+          "subject": "Operating Systems",
+          "level": "Advanced",
+          "source": "YouTube",
+          "url": "https://www.youtube.com/watch?v=juGNPLdjLH4"
+        },
+        {
+          "id": 64,
+          "title": "Distributed Operating Systems",
+          "subject": "Operating Systems",
+          "level": "Advanced",
+          "source": "Coursera",
+          "url": "https://www.coursera.org/learn/distributed-os"
+        }
+      ]
+    },
+    {
+      "subject": "DBMS",
+      "level": "Beginner",
+      "courses": [
+        {
+          "id": 18,
+          "title": "Database Design & Modeling",
+          "subject": "DBMS",
+          "level": "Intermediate",
+          "source": "Infosys Springboard",
+          "url": "https://infyspringboard.onwingspan.com/en/app/course/dbms-design"
+        },
+        {
+          "id": 20,
+          "title": "Normalization in DBMS",
+          "subject": "DBMS",
+          "level": "Intermediate",
+          "source": "Free Platform",
+          "url": "https://www.geeksforgeeks.org/normalization-in-dbms"
+        },
+        {
+          "id": 41,
+          "title": "SQL Advanced Queries",
+          "subject": "DBMS",
+          "level": "Intermediate",
+          "source": "YouTube",
+          "url": "https://www.youtube.com/watch?v=7S_tz1z_5bA"
+        },
+        {
+          "id": 42,
+          "title": "NoSQL Databases",
+          "subject": "DBMS",
+          "level": "Intermediate",
+          "source": "Coursera",
+          "url": "https://www.coursera.org/learn/nosql-databases"
+        },
+        {
+          "id": 67,
+          "title": "Transactions in DBMS",
+          "subject": "DBMS",
+          "level": "Intermediate",
+          "source": "YouTube",
+          "url": "https://www.youtube.com/watch?v=5XWAKRuN1Sg"
+        }
+      ]
+    },
+    {
+      "subject": "Coding",
+      "level": "Intermediate",
+      "courses": [
+        {
+          "id": 24,
+          "title": "Competitive Programming Guide",
+          "subject": "Coding",
+          "level": "Advanced",
+          "source": "Infosys Springboard",
+          "url": "https://infyspringboard.onwingspan.com/en/app/course/competitive-programming"
+        },
+        {
+          "id": 25,
+          "title": "Dynamic Programming Mastery",
+          "subject": "Coding",
+          "level": "Advanced",
+          "source": "YouTube",
+          "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk"
+        },
+        {
+          "id": 49,
+          "title": "Advanced Algorithms",
+          "subject": "Coding",
+          "level": "Advanced",
+          "source": "Free Platform",
+          "url": "https://www.geeksforgeeks.org/advanced-algorithms"
+        },
+        {
+          "id": 50,
+          "title": "System Design for Programmers",
+          "subject": "Coding",
+          "level": "Advanced",
+          "source": "Coursera",
+          "url": "https://www.coursera.org/learn/system-design"
+        },
+        {
+          "id": 74,
+          "title": "Machine Learning Coding",
+          "subject": "Coding",
+          "level": "Advanced",
+          "source": "Free Platform",
+          "url": "https://www.geeksforgeeks.org/machine-learning-with-python"
+        }
+      ]
+    }
+  ]
+}

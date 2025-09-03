@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+# For development, we'll use SQLite instead of PostgreSQL initially
+# psycopg2-binary
+alembic
+passlib[bcrypt]
+python-jose[cryptography]
+python-multipart
+pydantic
+python-dotenv
+email-validator
+scikit-learn
+numpy
+spacy
+textblob
+nltk
