@@ -41,6 +41,14 @@ export const login = async (credentials) => {
   try {
     console.log('Attempting to login with:', credentials);
     
+    // For development, use mockLogin instead of real API calls
+    // Import mockLogin function
+    const { mockLogin } = await import('./mockApi');
+    const result = await mockLogin(credentials);
+    
+    return result;
+    
+    /* Real API implementation (commented out for now)
     // Try both endpoints - with and without the /api/v1 prefix
     let response;
     try {
@@ -58,6 +66,7 @@ export const login = async (credentials) => {
     localStorage.setItem('user', JSON.stringify(user));
     
     return { success: true, token: access_token, user };
+    */
   } catch (error) {
     console.error('Login error:', error);
     throw new Error(error.response?.data?.detail || 'Login failed');
@@ -74,6 +83,14 @@ export const signup = async (userData) => {
     
     console.log('Attempting to register with:', userData);
     
+    // For development, use mockSignup instead of real API calls
+    // Import mockSignup function
+    const { mockSignup } = await import('./mockApi');
+    const result = await mockSignup(userData);
+    
+    return result;
+    
+    /* Real API implementation (commented out for now)
     // Check if we're using the correct endpoint
     // Try both with and without the /api/v1 prefix
     let response;
@@ -95,14 +112,20 @@ export const signup = async (userData) => {
     });
     
     return loginResponse;
+    */
   } catch (error) {
     throw new Error(error.response?.data?.detail || 'Signup failed');
   }
 };
 
-export const logout = () => {
-  localStorage.removeItem('token');
-  localStorage.removeItem('user');
+export const logout = async () => {
+  // For development, use mockLogout instead of real API calls
+  // Import mockLogout function
+  const { mockLogout } = await import('./mockApi');
+  await mockLogout();
+  
+  // Redirect to login page
+  window.location.href = '/login';
 };
 
 export const requestPasswordReset = async (data) => {
@@ -123,13 +146,16 @@ export const resetPassword = async (data) => {
   }
 };
 
-export const getCurrentUser = () => {
-  const user = localStorage.getItem('user');
-  return user ? JSON.parse(user) : null;
+export const getCurrentUser = async () => {
+  // For development, use mockApi's getCurrentUser instead of real API calls
+  const { getCurrentUser: mockGetCurrentUser } = await import('./mockApi');
+  return mockGetCurrentUser();
 };
 
-export const isAuthenticated = () => {
-  return !!localStorage.getItem('token');
+export const isAuthenticated = async () => {
+  // For development, use mockApi's isAuthenticated instead of real API calls
+  const { isAuthenticated: mockIsAuthenticated } = await import('./mockApi');
+  return mockIsAuthenticated();
 };
 
 // Assessment functions

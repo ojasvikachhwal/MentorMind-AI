@@ -11,7 +11,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-loading-spinner',
   standalone: true,
   imports: [
     CommonModule,
@@ -21,7 +21,7 @@ import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loa
     LoadingSpinnerComponent
   ],
   template: `
-    <div class="app-container">
+    <div class="loading-spinner">
       <app-header *ngIf="isAuthenticated$ | async"></app-header>
       
       <main class="main-content" [class.with-header]="isAuthenticated$ | async">
@@ -34,10 +34,11 @@ import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loa
     </div>
   `,
   styles: [`
-    .app-container {
+    .loading-spinner {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      background-color: #f5f5f5;
     }
     
     .main-content {

@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.api.v1.endpoints import auth, users, quizzes, performance, gamification, ai_tutor, voice, health, assessment, subjects, courses, question_analysis, admin, progress
+from app.api.v1.endpoints import auth, users, quizzes, performance, gamification, ai_tutor, voice, health, assessment, subjects, courses, question_analysis, admin, progress, ved_chat, mock_tests, automated_mock_tests, code_execution
 
 api_router = APIRouter()
 
@@ -18,3 +18,7 @@ api_router.include_router(courses.router, tags=["courses"])
 api_router.include_router(question_analysis.router, tags=["question-analysis"])
 api_router.include_router(progress.router, prefix="/progress", tags=["progress"])
 api_router.include_router(admin.router, prefix="/admin", tags=["admin"])
+api_router.include_router(ved_chat.router, prefix="/ved", tags=["ved-chat"])
+api_router.include_router(mock_tests.router, prefix="/mock-tests", tags=["mock-tests"])
+api_router.include_router(automated_mock_tests.router, prefix="/automated-tests", tags=["automated-mock-tests"])
+api_router.include_router(code_execution.router, prefix="/code", tags=["code-execution"])

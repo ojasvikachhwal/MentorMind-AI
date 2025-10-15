@@ -4,41 +4,43 @@
 // Mock authentication
 export const mockLogin = async (credentials) => {
   // Simulate API delay
-  await new Promise(resolve => setTimeout(resolve, 1000));
+  await new Promise(resolve => setTimeout(resolve, 500));
   
-  // Simple validation
-  if (credentials.username === 'student' && credentials.password === 'password') {
-    const token = 'mock-jwt-token-' + Date.now();
-    localStorage.setItem('token', token);
-    localStorage.setItem('user', JSON.stringify({
-      id: 1,
-      username: credentials.username,
-      full_name: 'Test Student',
-      email: 'student@example.com'
-    }));
-    return { success: true, token, user: { username: credentials.username } };
-  } else {
-    throw new Error('Invalid credentials');
-  }
+  // Always succeed with any credentials
+  const token = 'mock-jwt-token-' + Date.now();
+  const username = credentials.email?.split('@')[0] || 'user';
+  
+  // Store user info in localStorage
+  localStorage.setItem('token', token);
+  localStorage.setItem('user', JSON.stringify({
+    id: 1,
+    username: username,
+    full_name: 'Test Student',
+    email: credentials.email || 'student@example.com'
+  }));
+  
+  console.log('Login successful with:', credentials);
+  return { success: true, token, user: { username } };
 };
 
 export const mockSignup = async (userData) => {
   // Simulate API delay
   await new Promise(resolve => setTimeout(resolve, 1000));
   
-  // Simple validation
-  if (userData.username && userData.password && userData.email) {
+  // Simple validation - accept any input
+  if (userData.email && userData.password) {
     const token = 'mock-jwt-token-' + Date.now();
+    const username = userData.email.split('@')[0];
     localStorage.setItem('token', token);
     localStorage.setItem('user', JSON.stringify({
       id: 1,
-      username: userData.username,
-      full_name: userData.full_name || userData.username,
+      username: username,
+      full_name: userData.full_name || username,
       email: userData.email
     }));
-    return { success: true, token, user: { username: userData.username } };
+    return { success: true, token, user: { username: username } };
   } else {
-    throw new Error('Please fill in all required fields');
+    throw new Error('Please provide email and password');
   }
 };
 
@@ -95,4 +97,11 @@ export const startAssessment = async (subjectIds, numQuestionsPerSubject = 10) =
   // Return mock questions
   const response = await fetch('/mock/mockQuestions.json');
   return response.json();
+};
+
+// Reset database (for development purposes)
+export const resetDatabase = () => {
+  localStorage.clear();
+  console.log('Database reset successfully');
+  return { success: true, message: 'Database reset successfully' };
 };
