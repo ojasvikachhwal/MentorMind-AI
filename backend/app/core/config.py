@@ -45,5 +45,12 @@ class Settings:
     # AI Models
     AI_MODEL_PATH: str = os.getenv("AI_MODEL_PATH", "./ai_models")
     SPACY_MODEL: str = os.getenv("SPACY_MODEL", "en_core_web_sm")
+    
+    # OpenAI
+    OPENAI_API_KEY: Optional[str] = os.getenv("OPENAI_API_KEY")
+    
+    # Google Gemini
+    GEMINI_API_KEY: Optional[str] = os.getenv("GEMINI_API_KEY")
+    GEMINI_SERVICE_ACCOUNT_PATH: Optional[str] = os.getenv("GEMINI_SERVICE_ACCOUNT_PATH")
 
 settings = Settings()

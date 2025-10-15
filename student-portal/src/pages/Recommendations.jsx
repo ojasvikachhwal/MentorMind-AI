@@ -6,7 +6,11 @@ import {
   ExternalLink,
   RotateCcw,
   Filter,
-  X
+  X,
+  Home as HomeIcon,
+  BookText,
+  FileText,
+  Cpu
 } from 'lucide-react';
 
 const Recommendations = () => {
@@ -20,6 +24,11 @@ const Recommendations = () => {
     subject: 'all',
     level: 'all'
   });
+  const [showUserMenu, setShowUserMenu] = useState(false);
+  
+  const toggleUserMenu = () => {
+    setShowUserMenu(!showUserMenu);
+  };
 
   // Available subjects and levels for filtering
   const subjects = ['all', 'Operating Systems', 'Computer Networks', 'OOPs', 'DBMS', 'Coding'];
@@ -185,96 +194,109 @@ const Recommendations = () => {
   const hasRecommendations = Object.keys(filteredRecommendations).length > 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <GraduationCap className="h-8 w-8 text-blue-600" />
-              <div>
-                <h1 className="text-2xl font-bold text-gray-900">Course Recommendations</h1>
-                <p className="text-sm text-gray-600">
-                  Personalized learning path based on your assessment results
-                </p>
-              </div>
+    <div className="min-h-screen bg-gradient-to-b from-blue-500 to-purple-600">
+      {/* Header with horizontal navigation */}
+      <header className="bg-blue-600 p-4 flex justify-between items-center">
+        <div className="flex space-x-8">
+          <button 
+            onClick={() => navigate('/dashboard')} 
+            className="text-white flex items-center"
+          >
+            <HomeIcon className="h-4 w-4 mr-2" />
+            <span>Home</span>
+          </button>
+          <button 
+            onClick={() => navigate('/practice')} 
+            className="text-white flex items-center"
+          >
+            <BookText className="h-4 w-4 mr-2" />
+            <span>Practice</span>
+          </button>
+          <button 
+            onClick={() => navigate('/resources')} 
+            className="text-white flex items-center"
+          >
+            <FileText className="h-4 w-4 mr-2" />
+            <span>Resources</span>
+          </button>
+          <button 
+            onClick={() => navigate('/ved')} 
+            className="text-white flex items-center"
+          >
+            <Cpu className="h-4 w-4 mr-2" />
+            <span>Ved</span>
+          </button>
+        </div>
+        
+        <div className="relative">
+          <button onClick={toggleUserMenu} className="bg-white rounded-full w-8 h-8 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+          </button>
+          
+          {showUserMenu && (
+            <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
+              <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
+              <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
+              <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About Us</a>
+              <a href="#" onClick={() => navigate('/login')} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Log Out</a>
             </div>
-            <div className="flex items-center space-x-3">
-              <button
-                onClick={handleRefresh}
-                className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                <RotateCcw className="h-4 w-4 mr-2" />
-                Refresh
-              </button>
-              <button
-                onClick={handleRetakeTest}
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                <BookOpenIcon className="h-4 w-4 mr-2" />
-                Retake Test
-              </button>
+          )}
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <div className="bg-white mx-auto my-4 p-6 rounded-lg shadow-md max-w-6xl">
+        <div className="mb-4">
+          <h2 className="text-xl font-semibold text-blue-700 mb-2">Recommended Courses</h2>
+          
+          {/* Course categories in boxes */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="bg-purple-200 p-3 rounded-md">
+              <h3 className="font-medium text-purple-800">Computer Networks</h3>
+              <ul className="text-sm text-gray-600 mt-1">
+                <li>• Network Fundamentals</li>
+                <li>• TCP/IP Protocol</li>
+                <li>• Routing Algorithms</li>
+                <li>• Network Security</li>
+              </ul>
+            </div>
+            
+            <div className="bg-blue-200 p-3 rounded-md">
+              <h3 className="font-medium text-blue-800">Operating System</h3>
+              <ul className="text-sm text-gray-600 mt-1">
+                <li>• Process Management</li>
+                <li>• Memory Management</li>
+                <li>• File Systems</li>
+                <li>• I/O Systems</li>
+              </ul>
+            </div>
+            
+            <div className="bg-pink-200 p-3 rounded-md">
+              <h3 className="font-medium text-pink-800">Data Structure & Algorithms</h3>
+              <ul className="text-sm text-gray-600 mt-1">
+                <li>• Arrays and Linked Lists</li>
+                <li>• Trees and Graphs</li>
+                <li>• Sorting Algorithms</li>
+                <li>• Dynamic Programming</li>
+              </ul>
+            </div>
+            
+            <div className="bg-indigo-200 p-3 rounded-md">
+              <h3 className="font-medium text-indigo-800">OOPs</h3>
+              <ul className="text-sm text-gray-600 mt-1">
+                <li>• Classes and Objects</li>
+                <li>• Inheritance</li>
+                <li>• Polymorphism</li>
+                <li>• Encapsulation</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Filters */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center space-x-2">
-              <Filter className="h-5 w-5 text-gray-500" />
-              <h3 className="text-lg font-medium text-gray-900">Filter Courses</h3>
-            </div>
-            <button
-              onClick={clearFilters}
-              className="text-sm text-gray-500 hover:text-gray-700 flex items-center space-x-1"
-            >
-              <X className="h-4 w-4" />
-              <span>Clear filters</span>
-            </button>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label htmlFor="subject-filter" className="block text-sm font-medium text-gray-700 mb-2">
-                Subject
-              </label>
-              <select
-                id="subject-filter"
-                value={filters.subject}
-                onChange={(e) => setFilters(prev => ({ ...prev, subject: e.target.value }))}
-                className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-              >
-                {subjects.map(subject => (
-                  <option key={subject} value={subject}>
-                    {subject === 'all' ? 'All Subjects' : subject}
-                  </option>
-                ))}
-              </select>
-            </div>
-            
-            <div>
-              <label htmlFor="level-filter" className="block text-sm font-medium text-gray-700 mb-2">
-                Level
-              </label>
-              <select
-                id="level-filter"
-                value={filters.level}
-                onChange={(e) => setFilters(prev => ({ ...prev, level: e.target.value }))}
-                className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-              >
-                {levels.map(level => (
-                  <option key={level} value={level}>
-                    {level === 'all' ? 'All Levels' : level.charAt(0).toUpperCase() + level.slice(1)}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-        </div>
-
+      <div className="bg-white mx-auto my-4 p-6 rounded-lg shadow-md max-w-6xl">
         {/* Error Message */}
         {error && (
           <div className="bg-yellow-50 border border-yellow-200 rounded-md p-4 mb-6">
@@ -301,7 +323,7 @@ const Recommendations = () => {
               onClick={handleRetakeTest}
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
-              <BookOpenIcon className="h-4 w-4 mr-2" />
+              <BookOpen className="h-4 w-4 mr-2" />
               Take Assessment Test
             </button>
           </div>

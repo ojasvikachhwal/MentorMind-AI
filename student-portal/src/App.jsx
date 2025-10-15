@@ -1,11 +1,18 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
 
+// Home Page
+import Home from './pages/Home';
+import WelcomePage from './pages/WelcomePage';
+
+// Layout
+import AppLayout from './layouts/AppLayout';
+
 // Auth Pages
-import Login from './pages/auth/Login';
-import Signup from './pages/auth/Signup';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import ResetPassword from './pages/auth/ResetPassword';
+import LoginPage from './pages/auth/LoginPage';
+import SignupPage from './pages/auth/SignupPage';
 
 // Dashboard
 import Dashboard from './pages/dashboard/Dashboard';
@@ -16,13 +23,21 @@ import AssessmentTest from './pages/assessment/AssessmentTest';
 import AssessmentResults from './pages/assessment/AssessmentResults';
 
 // Course Pages
-import CourseRecommendations from './pages/courses/CourseRecommendations';
 import Recommendations from './pages/Recommendations';
 
 // Progress Tracking Pages
-import ProgressDashboard from './pages/progress/ProgressDashboard';
-import AIFeedback from './pages/progress/AIFeedback';
-import CodingPractice from './pages/progress/CodingPractice';
+import ProgressPage from './pages/progress/ProgressPage';
+
+// New Pages
+import PracticePage from './pages/practice/PracticePage';
+import ResourcePage from './pages/resources/ResourcePage';
+import VedPage from './pages/ved/VedPage';
+import Courses from './pages/Courses';
+import Practice from './pages/Practice';
+
+// Mock Test Pages
+import MockTestTaker from './pages/student/MockTestTaker';
+import AutomatedMockTests from './pages/AutomatedMockTests';
 
 // Admin Pages
 import AdminLogin from './pages/admin/AdminLogin';
@@ -34,18 +49,26 @@ function App() {
       <div className="App">
         <Routes>
           {/* Public Routes */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />
           
-          {/* Protected Routes */}
-          <Route path="/dashboard" element={
+          {/* Layout Routes with Persistent Sidebar */}
+          <Route element={
             <ProtectedRoute>
-              <Dashboard />
+              <AppLayout />
             </ProtectedRoute>
-          } />
+          }>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/practice" element={<Practice />} />
+            <Route path="/ved" element={<VedPage />} />
+            <Route path="/student/mock-tests" element={<MockTestTaker />} />
+            <Route path="/automated-mock-tests" element={<AutomatedMockTests />} />
+          </Route>
           
+          {/* Other Protected Routes */}
           <Route path="/assessment/start" element={
             <ProtectedRoute>
               <SubjectSelection />
@@ -64,12 +87,6 @@ function App() {
             </ProtectedRoute>
           } />
           
-          <Route path="/courses/recommendations" element={
-            <ProtectedRoute>
-              <CourseRecommendations />
-            </ProtectedRoute>
-          } />
-          
           <Route path="/recommendations/:studentId" element={
             <ProtectedRoute>
               <Recommendations />
@@ -79,28 +96,31 @@ function App() {
           {/* Progress Tracking Routes */}
           <Route path="/progress" element={
             <ProtectedRoute>
-              <ProgressDashboard />
+              <ProgressPage />
             </ProtectedRoute>
           } />
           
-          <Route path="/progress/feedback" element={
+          {/* New Routes */}
+          <Route path="/practice-old" element={
             <ProtectedRoute>
-              <AIFeedback />
+              <PracticePage />
             </ProtectedRoute>
           } />
           
-          <Route path="/progress/coding" element={
+          <Route path="/resources" element={
             <ProtectedRoute>
-              <CodingPractice />
+              <ResourcePage />
             </ProtectedRoute>
           } />
+          
           
           {/* Admin Routes */}
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/*" element={<AdminDashboard />} />
           
-          {/* Default redirect */}
-          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+          {/* Default Route */}
+          <Route path="/" element={<WelcomePage />} />
+          <Route path="/home" element={<Home />} />
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>
       </div>

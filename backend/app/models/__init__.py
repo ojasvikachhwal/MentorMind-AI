@@ -13,6 +13,12 @@ from .progress import (
     CodingPractice, WeeklyReport, ActivityType, FeedbackType
 )
 from .admin import Admin
+from .mock_test import (
+    MockTest, MockTestQuestion, MockTestSession, 
+    MockTestAnswer, MockTestAnalytics, MockTestStatus, 
+    MockTestSessionStatus
+)
+from .student_progress import StudentSubjectProgress
 from app.core.database import Base
 
 __all__ = [
@@ -43,5 +49,13 @@ __all__ = [
     "ActivityType",
     "FeedbackType",
     "Admin",
+    "MockTest",
+    "MockTestQuestion",
+    "MockTestSession",
+    "MockTestAnswer",
+    "MockTestAnalytics",
+    "MockTestStatus",
+    "MockTestSessionStatus",
+    "StudentSubjectProgress",
     "Base"
 ]

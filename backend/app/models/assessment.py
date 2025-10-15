@@ -24,12 +24,14 @@ class Subject(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(100), nullable=False, unique=True)
     description = Column(Text, nullable=True)
+    is_active = Column(Boolean, default=True, nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
 
     # Relationships
     courses = relationship("Course", back_populates="subject")
     questions = relationship("AssessmentQuestion", back_populates="subject")
+    student_progress = relationship("StudentSubjectProgress", back_populates="subject")
 
     def __repr__(self):
         return f"<Subject(id={self.id}, name='{self.name}')>"
